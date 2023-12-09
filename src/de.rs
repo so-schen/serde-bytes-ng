@@ -240,7 +240,8 @@ impl<'de, const N: usize> Deserialize<'de> for [u8; N] {
             type Value = [u8; N];
 
             fn expecting(&self, f: &mut fmt::Formatter) -> fmt::Result {
-                f.write_fmt(format_args!("byte array of length {N}"))
+                #[allow(clippy::uninlined_format_args)]
+                f.write_fmt(format_args!("byte array of length {}", N))
             }
 
             fn visit_bytes<E: Error>(self, v: &[u8]) -> Result<Self::Value, E> {
@@ -279,7 +280,8 @@ impl<'de, const N: usize> Deserialize<'de> for &'de [u8; N] {
             type Value = &'de [u8; N];
 
             fn expecting(&self, f: &mut fmt::Formatter) -> fmt::Result {
-                f.write_fmt(format_args!("byte array of length {N}"))
+                #[allow(clippy::uninlined_format_args)]
+                f.write_fmt(format_args!("byte array of length {}", N))
             }
 
             fn visit_borrowed_bytes<E>(self, v: &'de [u8]) -> Result<Self::Value, E>

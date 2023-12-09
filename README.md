@@ -1,3 +1,5 @@
+[![ci](https://github.com/so-schen/serde-bytes-ng/actions/workflows/ci.yml/badge.svg)](https://github.com/so-schen/serde-bytes-ng/actions/workflows/ci.yml)
+
 # serde-bytes-ng
 Integrate serde_bytes_ng and generic byte array support.
 
