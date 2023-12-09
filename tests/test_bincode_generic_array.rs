@@ -13,10 +13,10 @@ fn test_bincode_serde() {
         end: usize,
     }
     let test_value = Test {
-        start: 0xdeadbeef,
+        start: 0xdead_beef,
         array: [0xaa; 314],
         array_ref: &[0xff; 314],
-        end: 0xdeadbeef,
+        end: 0xdead_beef,
     };
     let serialized = bincode::serialize(&test_value).unwrap();
     let deserialized: Test = bincode::deserialize(&serialized).unwrap();
