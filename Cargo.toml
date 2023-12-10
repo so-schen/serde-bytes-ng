@@ -1,6 +1,6 @@
 [package]
 name = "serde_bytes_ng"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 categories = ["encoding", "no-std", "no-std::no-alloc"]
 description = "Optimized handling of `[u8; N]`, `&[u8]` and `Vec<u8>` for Serde"

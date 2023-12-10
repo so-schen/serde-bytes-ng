@@ -2,7 +2,7 @@
 [![crates.io](https://img.shields.io/crates/v/serde_bytes_ng.svg)](https://crates.io/crates/serde_bytes_ng)
 
 # serde-bytes-ng
-Integrate `serde_bytes` and generic byte array support.
+Integrate [`serde_bytes`](https://crates.io/crates/serde_bytes) and generic byte array support.
 
 The goal is the contribute to upstream `serde_bytes`, but because lack of response from its author, 
 create a separate crate with generic byte array support plus latest `serde_bytes` codes so that can
@@ -25,7 +25,7 @@ struct Efficient<'a> {
     byte_array: [u8; 188],
 
     #[serde(with = "serde_bytes_ng", borrow)]
-    byte_array: &'a [u8; 188],
+    byte_array_ref: &'a [u8; 188],
 
 }
 ```
