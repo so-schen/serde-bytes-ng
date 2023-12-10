@@ -1,4 +1,5 @@
 [![ci](https://github.com/so-schen/serde-bytes-ng/actions/workflows/ci.yml/badge.svg)](https://github.com/so-schen/serde-bytes-ng/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/serde_bytes_ng.svg)](https://crates.io/crates/serde_bytes_ng)
 
 # serde-bytes-ng
 Integrate `serde_bytes` and generic byte array support.
