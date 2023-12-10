@@ -249,9 +249,7 @@ impl<'de, const N: usize> Deserialize<'de> for [u8; N] {
                     return Err(E::invalid_length(v.len(), &self));
                 }
 
-                let mut arr = [0; N];
-                arr.copy_from_slice(v);
-                Ok(arr)
+                Ok(v.try_into().unwrap())
             }
 
             fn visit_str<E>(self, v: &str) -> Result<Self::Value, E>
